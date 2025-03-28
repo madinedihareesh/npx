@@ -1,25 +1,35 @@
-import Apple from './Apple';
+
 import './App.css';
-import { useState } from 'react';
+import Apple from './Apple';
+
 
 
 
 
 function App() {
-  const [count,setCount]=useState(0);
-  const Increment=()=>{
-      setCount(count+1);
-  };
-  const Dcrement=()=>{
-    setCount(count-1);
-  };
+  const Products=[
+    {
+      title:"product1",
+      discription:"hello",
+
+    },
+    {
+      title:"product1",
+      discription:"hello",
+    },
+    {title:"product1",
+      discription:"hello",
+    }
+  ]
+  
   return (
     <div className="App">
-    <button onClick={Increment}>Increment</button>
-    {count}
-    <button onClick={Dcrement}>Dcrement</button>
-
-    <Apple/>
+    
+{
+  Products.map((item)=>{
+   return <Apple title={item.title} dec= {item.discription} />
+})
+}
     </div>
 
 
