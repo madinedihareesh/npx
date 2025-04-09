@@ -1,21 +1,24 @@
 
 import './App.css';
-import Crender from './Crender';
-// import Apple from './Apple';
-// import Css from './Css';
-// import With from './With';
-// import WithOut from './WithOut';
-
-
-
-
+import { Routes,Route } from 'react-router-dom';
+import FirstCom from './Components/FirstCom';
+import SecondCom from './Components/SecondCom';
+import ThirdCom from './Components/ThirdCom';
+import FourthCom from './Components/FourthCom';
+import Navbar from './Components/Navbar';
 
 function App() {
   
   
   return (
     <div className="App">
-      <Crender/>
+      <Navbar/>
+    <Routes>
+      <Route path='/index' element={<FirstCom/>}/>
+      <Route path='/products' element={<SecondCom/>}/>
+      <Route path='/cart' element={<ThirdCom/>}/>
+      <Route path='/about' element={<FourthCom/>}/>
+    </Routes>
     </div>
 
 
